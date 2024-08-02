@@ -152,16 +152,29 @@ int descsort(int a[]){
 	}
 }
 
-char sortstring(){
+void sortstring(){
 	char str[20];
-	int a,n,i;
+	char temp;
+	int n,i,j;
+
+	printf("Enter a string to sort it :- \n");
+	scanf("%s",&str);
 
 	n = strlen(str);
 
-	printf("Enter a string to sort according to the character :- \n");
-	scanf("%c",&str);
+	printf("\nString before sorting :- %s\n",str);
 
-	
+	for (i = 0; i < n-1; i++) {
+      for (j = i+1; j < n; j++) {
+         if (str[i] > str[j]) {
+            temp = str[i];
+            str[i] = str[j];
+            str[j] = temp;
+         }
+      }
+   }
+
+	printf("String after sorting :- %s\n",str);
 }
 
 void main(){
@@ -170,6 +183,7 @@ void main(){
 
 	printf("\n------------------Menu-------------------\n\n");
 	printf("1 : For Inserting Elements in the array\n2 : For Inserting Elements in array in Reverse Order\n3 : For Deleting an array element\n4 : For Searching a element in an array\n5 : For Sorting out the Array in ascending order\n6 : For Sorting out the Array in descending order\n7 : To sort a string\n\n");
+	printf("Pls enter your choice according from above options :- \n");
 	scanf("%d",&key);
 
 	switch(key){
