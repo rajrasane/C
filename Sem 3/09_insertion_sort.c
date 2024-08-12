@@ -27,11 +27,11 @@ void main(){
 int insertion_sort(int a[],int n){
 	int i,j,temp;
 	
-	for(i=i;i<=n-1;i++){
-		for(j=i;j>0 && a[j-1]>a[j];j--){
-			temp = a[j];
-			a[j] = a[j-1];
-			a[j-1] = temp;
-		}
+	for(i=1;i<n;i++){
+        int key = a[i];
+        for(j=i-1;j>=0 && (key<a[j]);j--){
+            a[j+1] = a[j];
+        }
+        a[j+1] = key;
 	}
 }
