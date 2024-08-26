@@ -24,11 +24,7 @@ void main() {
 }
 
 int partition(int a[], int low, int high) {
-    int temp;
-    
-    int pivot = a[high];
-
-    int i = low - 1;
+    int pivot = a[high],temp,i = low - 1;
 
     for (int j = low; j <= high - 1; j++) {
         if (a[j] < pivot) {
@@ -39,7 +35,6 @@ int partition(int a[], int low, int high) {
             a[j] = temp;
         }
     }
-    
     // swap
     temp = a[i+1];
     a[i+1] = a[high];
@@ -49,9 +44,7 @@ int partition(int a[], int low, int high) {
 }
 
 void quickSort(int a[], int low, int high) {
-  
     if (low < high) {
-      
         int pi = partition(a, low, high);
 
         quickSort(a, low, pi - 1);
