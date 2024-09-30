@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<stdlib.h>
-void display();
 
 struct node {
    int info;
@@ -40,7 +39,7 @@ void main() {
        }
    }
 
-   display();
+   
 }
 
 void display() {
