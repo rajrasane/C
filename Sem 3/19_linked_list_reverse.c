@@ -19,17 +19,9 @@ int main() {
     for (int i = 0; i < n; i++) {
         tmp = malloc(sizeof(struct node));
 
-        if (i == 0) {
-            printf("\nEnter value for 1st node: \n");
-        } else if (i == 1) {
-            printf("\nEnter value for 2nd node: \n");
-        } else if (i == 2) {
-            printf("\nEnter value for 3rd node: \n");
-        } else {
-            printf("\nEnter value for %dth node: \n", i + 1);
-        }
-
+        printf("\nEnter value for %dth node: \n", i + 1);
         scanf("%d", &tmp->info);
+
         tmp->link = NULL;
 
         if (start == NULL) {
@@ -43,12 +35,12 @@ int main() {
         }
     }
 
-    printf("\nEntered Linked List:\n");
+    printf("\n\nEntered Linked List:\n");
     display(start);
 
     struct node *rev = reverse(start);
 
-    printf("\n\nReversed Linked List:\n");
+    printf("\nReversed Linked List:\n");
     display(rev);
 
     return 0;
