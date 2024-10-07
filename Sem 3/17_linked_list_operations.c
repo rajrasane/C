@@ -18,7 +18,7 @@ int main() {
     for (i = 0; i < j; i++) {
         tmp = (struct node *)malloc(sizeof(struct node));
 
-        printf("Enter element :- \n");
+        printf("Enter element :- ");
         scanf("%d", &data);
 
         tmp->info = data;
@@ -34,7 +34,7 @@ int main() {
             q->link = tmp;
         }
 
-        printf("Do you want to enter more elements (y/n) :- \n");
+        printf("Do you want to enter more elements (y/n) :- ");
         scanf(" %c", &ch);
 
         if (ch == 'y' || ch == 'Y') {
