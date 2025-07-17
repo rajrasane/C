@@ -52,7 +52,7 @@ void insertionsort(int arr[], int n) {
 }
 
 int main() {
-    int child_pid;
+    pid_t child_pid;
     int size ;
 
     printf("Enter number of integer to be sort:\n");
