@@ -1,3 +1,7 @@
+/* 
+ Implement the C program to accept n integers to be sorted. Main function creates child process using fork system call. Parent process sorts the integers using bubble sort and waits for child process using wait system call. Child process sorts the integers using insertion sort.
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/types.h>
